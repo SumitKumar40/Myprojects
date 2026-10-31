@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retro Rags | Vintage Thrift Store</title>
+  <meta name="description" content="Retro Rags - a vintage thrift store catalog of pre-loved 70s, 80s, 90s and Y2K fashion.">
+
+  <!-- Google Fonts: Abril Fatface (headings) + DM Sans (body text) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Our own styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Lets keyboard users jump straight to the products -->
+  <a class="skip-link" href="#shop">Skip to products</a>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="logo" aria-label="Retro Rags home">
+        <span class="logo-icon"><i class="fa-solid fa-shirt" aria-hidden="true"></i></span>
+        <span class="logo-text">Retro<span>Rags</span></span>
+      </a>
+
+      <form class="search-form" id="searchForm" role="search">
+        <label for="searchInput" class="sr-only">Search products</label>
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" id="searchInput" placeholder="Search denim, Levi's, floral..." autocomplete="off">
+      </form>
+
+      <button type="button" class="wishlist-btn" id="wishlistToggle" aria-pressed="false" aria-label="Show only my wishlist">
+        <i class="fa-solid fa-heart" aria-hidden="true"></i>
+        <span class="wishlist-label">Wishlist</span>
+        <span class="wishlist-count" id="wishlistCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <!-- Decorative background shapes -->
+    <div class="hero-shapes" aria-hidden="true">
+      <span class="shape shape-sun"></span>
+      <span class="shape shape-circle"></span>
+      <span class="shape shape-dots"></span>
+    </div>
+
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <p class="hero-eyebrow"><i class="fa-solid fa-recycle" aria-hidden="true"></i> Hand-picked pre-loved fashion</p>
+        <h1>Old clothes.<br><span class="highlight">New stories.</span></h1>
+        <p class="hero-tagline">
+          Dig through our racks of one-of-a-kind 70s, 80s, 90s and Y2K treasures.
+          Every piece is hand-picked, cleaned and ready for its next adventure - with you.
+        </p>
+        <div class="hero-actions">
+          <a href="#shop" class="btn btn-primary">Shop the Rack <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+          <a href="#footer" class="btn btn-outline">Why thrift?</a>
+        </div>
+        <div class="era-quick">
+          <span>Jump to an era:</span>
+          <button type="button" class="era-quick-btn" data-era="70s">70s</button>
+          <button type="button" class="era-quick-btn" data-era="80s">80s</button>
+          <button type="button" class="era-quick-btn" data-era="90s">90s</button>
+          <button type="button" class="era-quick-btn" data-era="Y2K">Y2K</button>
+        </div>
+      </div>
+
+      <!-- Polaroid-style photo collage (decorative) -->
+      <div class="hero-collage" aria-hidden="true">
+        <div class="polaroid p1">
+          <div class="polaroid-img" style="background-image: url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=500&q=80');"></div>
+          <span>the rack</span>
+        </div>
+        <div class="polaroid p2">
+          <div class="polaroid-img" style="background-image: url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500&q=80');"></div>
+          <span>disco fever</span>
+        </div>
+        <div class="polaroid p3">
+          <div class="polaroid-img" style="background-image: url('https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=500&q=80');"></div>
+          <span>y2k forever</span>
+        </div>
+        <div class="sticker">Up to<strong>80%</strong>off</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MARQUEE STRIP ================= -->
+  <!-- The text is repeated twice so the loop looks seamless -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>PRE-LOVED</span><span class="star">&#9733;</span>
+      <span>ONE OF A KIND</span><span class="star">&#9733;</span>
+      <span>SUSTAINABLE FASHION</span><span class="star">&#9733;</span>
+      <span>70s &bull; 80s &bull; 90s &bull; Y2K</span><span class="star">&#9733;</span>
+      <span>GOOD FOR YOUR WALLET</span><span class="star">&#9733;</span>
+      <span>PRE-LOVED</span><span class="star">&#9733;</span>
+      <span>ONE OF A KIND</span><span class="star">&#9733;</span>
+      <span>SUSTAINABLE FASHION</span><span class="star">&#9733;</span>
+      <span>70s &bull; 80s &bull; 90s &bull; Y2K</span><span class="star">&#9733;</span>
+      <span>GOOD FOR YOUR WALLET</span><span class="star">&#9733;</span>
+    </div>
+  </div>
+
+  <!-- ================= SHOP ================= -->
+  <main id="shop" class="container shop">
+    <div class="shop-header">
+      <div>
+        <p class="section-eyebrow">The Rack</p>
+        <h2>Fresh finds, only one of each</h2>
+      </div>
+
+      <div class="toolbar">
+        <!-- Only visible on mobile / tablet: opens the filter drawer -->
+        <button type="button" class="btn btn-filters" id="openFilters" aria-controls="filterPanel" aria-expanded="false">
+          <i class="fa-solid fa-sliders" aria-hidden="true"></i> Filters
+          <span class="filter-badge" id="filterBadge" hidden>0</span>
+        </button>
+
+        <label for="sortSelect" class="sort-label">Sort by</label>
+        <select id="sortSelect">
+          <option value="featured">Featured</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="newest">Newest</option>
+          <option value="discount">Biggest Discount</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="shop-layout">
+
+      <!-- ===== FILTER PANEL (sidebar on desktop, slide-in drawer on mobile) ===== -->
+      <aside class="filter-panel" id="filterPanel" aria-label="Product filters">
+        <div class="filter-header">
+          <h3><i class="fa-solid fa-sliders" aria-hidden="true"></i> Filters</h3>
+          <button type="button" class="link-btn" id="clearAllBtn">Clear all</button>
+          <button type="button" class="drawer-close" id="closeFilters" aria-label="Close filters">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <!-- The options inside each group are created by script.js -->
+        <div class="filter-body">
+          <fieldset class="filter-group">
+            <legend>Category</legend>
+            <div class="check-list" id="categoryOptions"></div>
+          </fieldset>
+
+          <fieldset class="filter-group">
+            <legend>Size</legend>
+            <div class="pill-list" id="sizeOptions"></div>
+          </fieldset>
+
+          <fieldset class="filter-group">
+            <legend>Era / Decade</legend>
+            <div class="pill-list" id="eraOptions"></div>
+          </fieldset>
+
+          <fieldset class="filter-group">
+            <legend>Condition</legend>
+            <div class="check-list" id="conditionOptions"></div>
+          </fieldset>
+
+          <fieldset class="filter-group">
+            <legend>Gender</legend>
+            <div class="pill-list" id="genderOptions"></div>
+          </fieldset>
+
+          <fieldset class="filter-group">
+            <legend>Colour</legend>
+            <div class="swatch-list" id="colorOptions"></div>
+          </fieldset>
+
+          <fieldset class="filter-group">
+            <legend>Price range</legend>
+            <div class="price-values">
+              <span id="priceMinLabel">&#8377;0</span>
+              <span>to</span>
+              <span id="priceMaxLabel">&#8377;5,000</span>
+            </div>
+            <label for="priceMin" class="range-label">Minimum price</label>
+            <input type="range" id="priceMin" min="0" max="5000" step="100" value="0">
+            <label for="priceMax" class="range-label">Maximum price</label>
+            <input type="range" id="priceMax" min="0" max="5000" step="100" value="5000">
+          </fieldset>
+        </div>
+
+        <!-- Only visible inside the mobile drawer -->
+        <div class="drawer-footer">
+          <button type="button" class="btn btn-primary btn-block" id="showResultsBtn">Show results</button>
+        </div>
+      </aside>
+
+      <!-- ===== RESULTS ===== -->
+      <section class="results" aria-label="Products">
+        <p class="result-count" id="resultCount" aria-live="polite">Showing 30 of 30 items</p>
+
+        <!-- Active filter chips appear here -->
+        <div class="active-chips" id="activeChips"></div>
+
+        <!-- Product cards are added here by script.js -->
+        <div class="product-grid" id="productGrid"></div>
+
+        <!-- Shown only when no product matches -->
+        <div class="empty-state" id="emptyState" hidden>
+          <div class="empty-icon"><i class="fa-solid fa-box-open" aria-hidden="true"></i></div>
+          <h3>No treasures found</h3>
+          <p>We dug through every rack but nothing matches all of those filters. Try removing a few!</p>
+          <button type="button" class="btn btn-primary" id="resetBtn">
+            <i class="fa-solid fa-rotate-left" aria-hidden="true"></i> Reset filters
+          </button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer" id="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo logo-light">
+          <span class="logo-icon"><i class="fa-solid fa-shirt" aria-hidden="true"></i></span>
+          <span class="logo-text">Retro<span>Rags</span></span>
+        </a>
+        <p>A tiny thrift shop with a big love for clothes that have lived a little. Every piece is a one-off - once it's gone, it's gone.</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest" aria-hidden="true"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#shop">All items</a></li>
+          <li><a href="#shop">New arrivals</a></li>
+          <li><a href="#shop">Under &#8377;999</a></li>
+          <li><a href="#shop">Accessories</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#">Size guide</a></li>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Contact us</a></li>
+        </ul>
+      </div>
+
+      <div class="why-thrift">
+        <h4><i class="fa-solid fa-seedling" aria-hidden="true"></i> Why thrift?</h4>
+        <ul>
+          <li><strong>Saves water:</strong> one new pair of jeans can use thousands of litres.</li>
+          <li><strong>Less waste:</strong> keeps good clothes out of landfill.</li>
+          <li><strong>Unique style:</strong> nobody else will have your outfit.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Retro Rags. Made with <i class="fa-solid fa-heart" aria-hidden="true"></i> and a lot of old denim.</p>
+    </div>
+  </footer>
+
+  <!-- Dark background behind the mobile filter drawer -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+
+  <!-- ================= QUICK VIEW MODAL ================= -->
+  <div class="modal-overlay" id="quickViewModal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button type="button" class="modal-close" id="modalClose" aria-label="Close quick view">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+      <!-- Filled in by script.js when a product is clicked -->
+      <div class="modal-content" id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- Small pop-up message (e.g. "Saved to wishlist") -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Back to top button -->
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- data.js must load first, because script.js uses the "products" array -->
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
